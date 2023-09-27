@@ -1,0 +1,32 @@
+<html>     
+   <head> 
+      <title>Task7</title>    
+      <script type = "text/javascript">     
+        
+            var img = null;     
+            function init(){      
+               img = document.getElementById('myimg');    
+               img.style.position = 'relative';         
+               img.style.left = '50px';       
+            }         
+            function moveRight(){      
+               img.style.left = parseInt(    
+               img.style.left) + 100 + 'px';      
+            }      
+            window.onload = init;      
+       
+      </script>     
+   </head>     
+       
+   <body>     
+      <form>     
+         <img id = "myimg" src = "./train.jpeg" />     
+         <center>    
+            <p>Click the following buttons to handle animation</p>     
+         <input type = "button" value = "start" onclick = "moveRight();"  />
+         <input type="button" value="stop">    
+      </center>     
+      </form>    
+   </body>    
+       
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+
+    <form id="inputForm">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString">
+        <input type="button" value="Sort" onclick="alphaorder()">
+    </form>
+
+    <p>Sorted String: <span id="sortedResult"></span></p>
+
+    <script>
+        function alphaorder() {
+            let inputElement = document.getElementById("inputString");
+            let resultElement = document.getElementById("sortedResult");
+
+            let a = inputElement.value;
+            let charArray = a.split('');
+            charArray.sort();
+
+            let alpha = charArray.join('');
+            resultElement.textContent = alpha;
+        }
+    </script>
+    
+</body>
+</html>
